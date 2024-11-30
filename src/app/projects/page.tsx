@@ -3,47 +3,63 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoAlinea from '@/images/logos/Alinea_logo_Grn.png'
+import logoClaimTally from '@/images/logos/Claimtally_logo-AI.svg'
+import logoAvonEHR from '@/images/logos/logoAvonEHR.svg'
+import logoIntuition from '@/images/logos/TeamBuilder-Logo-byINT-horiz-Slate.svg'
+import logoRateTracker from '@/images/logos/RateTracker-logo.png'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'RateTracker',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'RateTracker is a web application that allows users to track the exchange rates of different currencies.',
+    stack: 'Python + django, Next.js, Tailwind CSS, TypeScript',
+    link: {
+      href: 'https://ratetracker.io',
+      label: 'Visit RateTracker',
+    },
+    logo: logoRateTracker,
   },
   {
-    name: 'Animaginary',
+    name: 'Alinea 340B platform',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'The Alinea Group (Alinea) provides pharmacy enterprise solutions and consulting services to the country’s leading healthcare organizations',
+    stack:
+      'Python + django in AWS EKS, React, TypesScript, Redshift, GPT-4o, Pandas',
+    link: {
+      href: 'https://www.alinea-group.com/',
+      label: 'Visit the alinea group',
+    },
+    logo: logoAlinea,
   },
   {
-    name: 'HelioStream',
+    name: 'AvonEHR',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'Avon is an advanced EHR with blood chemistry analysis and laboratory integration',
+    stack: 'Node.js, Express.js, React.js, PostgresSQL, TypeScript',
+    link: {
+      href: 'https://avonehr.com/index.html',
+      label: 'Visit AvonEHR',
+    },
+    logo: logoAvonEHR,
   },
   {
-    name: 'cosmOS',
+    name: 'ClaimTally AI',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+      'A stunning application of AI Vision, ClaimTally AI generates complete home inventories for insurance loss claims from pictures and videos inside your home.Then, an AI-enabled shopping bot is used to find the closest match to lost items to generate current replacement costs.',
+    stack:
+      'Python + django in AWS EKS, Tailwind, HTMX, GPT-4o, GPT-4o mini, Claude Haiku',
+    link: { href: 'https://claimtally.ai/', label: 'Visit ClaimTally AI' },
+    logo: logoClaimTally,
   },
   {
-    name: 'OpenShuttle',
+    name: 'TeamBuilder: Corporate social network',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'TeamBuilder by Intuition delivers Banter, CoffeeChats, Challenges, and a Corporate Social Network connected with slack and MS Teams to help HR managers build strong cultures in today’s remote and hybrid work environment.',
+    stack: 'Python + django in AWS EKS, React, GPT-4o',
+    link: { href: 'https://intuition.us/', label: 'Visit Intuition' },
+    logo: logoIntuition,
   },
 ]
 
@@ -75,17 +91,20 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex items-center justify-center border-zinc-700/50 bg-white ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={project.logo}
                 alt=""
-                className="h-8 w-8"
+                //className="h-8 w-8"
                 unoptimized
               />
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
+              Stack: {project.stack}
+            </p>
             <Card.Description>{project.description}</Card.Description>
             <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
