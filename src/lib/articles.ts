@@ -2,6 +2,7 @@ import glob from 'fast-glob'
 
 interface Article {
   title: string
+  slug: string
   description: string
   author: string
   date: string
