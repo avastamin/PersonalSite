@@ -7,7 +7,7 @@ import logoAlinea from '@/images/logos/Alinea_logo_Grn.png'
 import logoClaimTally from '@/images/logos/Claimtally_logo-AI.svg'
 import logoAvonEHR from '@/images/logos/logoAvonEHR.svg'
 import logoIntuition from '@/images/logos/TeamBuilder-Logo-byINT-horiz-Slate.svg'
-import logoRateTracker from '@/images/logos/RateTracker-logo.png'
+import logoRateTracker from '@/images/logos/ratetracker-logo.png'
 
 const projects = [
   {
