@@ -10,6 +10,8 @@ import logoAvonEHR from '@/images/logos/logo-clinios.svg'
 import logoThrive from '@/images/logos/logo-thrive.png'
 import logoSaaSFactory from '@/images/logos/saas-factory.png'
 import logoTalea from '@/images/logos/talea-logo.svg'
+import logoMedidate from '@/images/logos/medidate-logo.png'
+import logoDebat from '@/images/logos/debatnl-logo.png'
 import image1 from '@/images/photos/image-11.png'
 import image2 from '@/images/photos/image-22.png'
 import image3 from '@/images/photos/image-33.png'
@@ -160,7 +162,7 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        <Image src={role.logo} alt="" className="h-7 w-auto" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -217,6 +219,20 @@ function Resume() {
       logo: logoTalea,
       start: '2018',
       end: '2021',
+    },
+    {
+      company: 'eHealth Medidate GmbH, Germany',
+      title: 'Senior FullStack Engineer',
+      logo: logoMedidate,
+      start: '2015',
+      end: '2018',
+    },
+    {
+      company: 'Debat.NL',
+      title: 'Senior Web Developer',
+      logo: logoDebat,
+      start: '2014',
+      end: '2015',
     },
   ]
 
