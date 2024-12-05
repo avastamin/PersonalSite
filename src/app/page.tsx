@@ -6,10 +6,10 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoAvonEHR from '@/images/logos/logo-clinios.svg'
+import logoThrive from '@/images/logos/logo-thrive.png'
+import logoSaaSFactory from '@/images/logos/saas-factory.png'
+import logoTalea from '@/images/logos/talea-logo.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -188,35 +188,35 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'SaaS Factory',
+      title: 'Senior Software Engineer(Remote)',
+      logo: logoSaaSFactory,
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'AvonEHR',
+      title: 'Engineering Team Lead(Remote)',
+      logo: logoAvonEHR,
+      start: '2020',
+      end: '2022',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: 'Thrive Alternatives Capital Advisory',
+      title: 'Software Engineering Team Lead',
+      logo: logoThrive,
+      start: '2021',
+      end: '2022',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Talea Pflege GmbH, Germany',
+      title: 'Senior Software Engineer',
+      logo: logoTalea,
+      start: '2018',
+      end: '2021',
     },
   ]
 
